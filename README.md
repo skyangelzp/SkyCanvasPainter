@@ -1,1 +1,1 @@
-# SkyPainter-on-Canvas-JS
+# Painter on Canvas JS with soft/smoothness brush
