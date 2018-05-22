@@ -1,0 +1,137 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #222;
+    color: #eee;
+    font: 14px/24px Arial, serif;
+    position: relative;
+}
+
+.painter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.painter-plot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 220px;
+    cursor: pointer;
+}
+.painter-canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.painter-controls-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 220px;
+    padding: 20px;
+    border-top: 1px solid #444;
+    background: #333;
+    text-align: center;
+}
+.painter-controls{
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.control-group.group-color{
+    width: 150px;
+}
+
+.painter-control {
+    margin: 0 20px;
+    display: block;
+    text-align: left;
+    position: relative;
+}
+
+.painter-control--color {
+    max-width: 150px;
+}
+
+.painter-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.painter-color {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    margin: 0 10px 20px 0;
+    display: inline-block;
+    vertical-align: top;
+    transition: all 0.2s linear;
+}
+
+.painter-color.is-active {
+    border-color: #fff;
+    cursor: default;
+}
+.control-group.group-range{
+    width: 250px;
+}
+.painter-control input[type=range]{
+    width: 100%;
+    display: block;
+}
+.control-group.group-range .range-value{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #eee;
+    color: #444;
+    border: 1px solid #666;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.painter-control .brush-preview{
+    border: 1px solid #463b3b;
+    background: #fcfcfc;
+    display: block;
+}
+.painter-button {
+    display: block;
+    margin-bottom: 10px;
+    width: 200px;
+    color: #eee;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: normal;
+    border: 1px solid #444;
+    background: #666;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.painter-button:hover {
+    opacity: 0.8;
+}

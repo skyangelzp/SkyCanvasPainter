@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            SKY Painter
+        </title>
+        <meta content="" name='description'/>
+        <meta content="" name='keywords'/>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+        <link href="css/application.css" rel="stylesheet"/>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/application.js"></script>
+    </head>
+    <body>
+        <div class="painter">
+            <div class="painter-plot">
+                <canvas class="painter-canvas" id="painter"></canvas>
+            </div>
+            <div class="painter-controls-wrapper">
+                <div class="painter-controls">
+                    <div class="control-group">
+                        <div class="painter-control painter-control--color">
+                            <div class="painter-title group-color">
+                                Цвет
+                            </div>
+                            <div class="painter-color" data-color="#ff0000" style="background: #ff0000;"></div>
+                            <div class="painter-color is-active" data-color="#00ff00" style="background: #00ff00;"></div>
+                            <div class="painter-color" data-color="#0000ff" style="background: #0000ff;"></div>
+                            <div class="painter-color" data-color="#ff00ff" style="background: #ff00ff;"></div>
+                            <div class="painter-color" data-color="#00ffff" style="background: #00ffff;"></div>
+                            <div class="painter-color" data-color="#ffff00" style="background: #ffff00;"></div>
+                        </div>
+                    </div>
+                    <div class="control-group group-range">
+                        <div class="painter-control">
+                            <div class="painter-title">
+                                Толщина
+                            </div>
+                            <input type="range" data-size min="1" max="100" step="1" value="50">
+                            <span class="range-value"></span>
+                        </div>
+                        <div class="painter-control">
+                            <div class="painter-title">
+                                Прозрачность
+                            </div>
+                            <input type="range" data-opacity min="0" max="100" step="1" value="90">
+                            <span class="range-value"></span>
+                        </div>
+                        <div class="painter-control">
+                            <div class="painter-title">
+                                Жесткость
+                            </div>
+                            <input type="range" data-rigidity min="1" max="100" step="1" value="50">
+                            <span class="range-value"></span>
+                        </div> 
+                    </div>
+                    <div class="control-group">
+                        <div class="painter-control">
+                            <canvas class="brush-preview" id="brush-preview" width="102px" height="102px"></canvas>
+                        </div>
+                    </div>
+                    <div class="control-group group-action">
+                        <div class="painter-control painter-action">
+                            <div class="painter-title">
+                                Действия
+                            </div>
+                            <button class="painter-button" data-clear>Очистить холст</button>
+                            <button class="painter-button" data-save>Сохранить в файл</button>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </body>
+</html>
